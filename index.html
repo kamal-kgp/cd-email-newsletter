@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .email-container {
+        width: 1650px;
+        height: 1346px;
+        background-color: #f8f8fc;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: end;
+        row-gap: 30px;
+
+        margin: 0px;
+        padding: 0px;
+      }
+
+      .main-content {
+        width: 1131px;
+        height: 922px;
+        background-color: #ffffff;
+        border: 1px 0px 0px 0px;
+        opacity: 0px;
+        border: 1px solid #c4c4c4;
+
+        display: flex;
+        flex-direction: column;
+        margin: 0px;
+        padding: 0px;
+      }
+
+      .scan-overview {
+        height: 95px;
+        padding: 0px;
+        margin: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        /*border: 1px solid blue;*/
+      }
+
+      .your-scan {
+        height: 43px;
+        gap: 0px;
+        opacity: 0px;
+
+        margin: 0px;
+        padding: 0px;
+
+        font-family: Sans-Serif;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 43.2px;
+        text-align: left;
+        color: #161616;
+      }
+
+      .last-scan {
+        /*width: 1059px;*/
+        height: 26px;
+        gap: 0px;
+        opacity: 80%;
+        margin: 0px;
+        padding: 0px;
+
+        font-family: Sans-Serif;
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 26.4px;
+        text-align: left;
+      }
+
+      .application-info {
+        display: flex;
+        flex-direction: column;
+        row-gap: 35px;
+
+        margin: 0px;
+        padding: 0px;
+        /*border: 1px solid #c4c4c4;*/
+      }
+
+      .application-bar {
+        width: 1100.02px;
+        height: 72px;
+        border: 1px 0px 0px 0px;
+        opacity: 0px;
+        background: #fcfcfc;
+        border: 1px solid #c4c4c4;
+
+        font-family: Sans-Serif;
+        font-size: 23px;
+        font-weight: 700;
+        line-height: 27.6px;
+        text-align: left;
+
+        display: flex;
+        align-items: center;
+
+        padding: 0px 0px 0px 30px;
+        margin: 0px;
+      }
+
+      .info {
+        display: flex;
+        flex-direction: column;
+        row-gap: 40px;
+        margin: 0px 0px 35px 0px;
+        padding: 0px 0px 0px 30px;
+        /*border: 1px solid #C4C4C4;*/
+      }
+
+      .appplication-about {
+        width: 100%;
+        height: 200px;
+        opacity: 0px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        margin: 0px;
+        padding: 0px;
+        /*border: 1px solid #C4C4C4;*/
+      }
+
+      .appplication-about div {
+        width: 100%;
+        height: 26px;
+        opacity: 0px;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        margin: 0px;
+        padding: 0px;
+      }
+
+      .findings {
+        width: 718px;
+        height: 95px;
+        opacity: 0px;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        /*border: 1px solid #C4C4C4;*/
+        margin: 0px;
+        padding: 0px;
+      }
+
+      .vuln {
+        width: 134px;
+        height: 95px;
+        border-radius: 9px 9px 9px 9px;
+        opacity: 0px;
+        gap: 0px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0px;
+        padding: 0px;
+      }
+
+      .finding-data {
+        width: 90px;
+        height: 55px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        /*border: 1px solid red;*/
+        box-sizing: border-box;
+        padding: 0px;
+        margin: 0px;
+      }
+
+      .view-all-scan {
+        width: 226px;
+        height: 74px;
+        padding: 24px 26px 24px 26px;
+        gap: 10px;
+        border-radius: 6px 6px 6px 6px;
+        border: 0px;
+        opacity: 0px;
+        background: #07af7e;
+        margin: 0px;
+
+        color: #ffffff;
+        font-family: Sans-Serif;
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 26.4px;
+        text-align: center;
+      }
+
+      :hover .view-all-scan {
+        cursor: pointer;
+      }
+
+      .footer {
+        width: 1650px;
+        height: 234px;
+        gap: 0px;
+        opacity: 0px;
+        /*border: 1px solid #c4c4c4;*/
+
+        margin: 0px;
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .support {
+        width: 1100px;
+        height: 76px;
+        margin: 0px;
+        padding: 0px 0px 0px 30px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        /*border: 1px solid blue;*/
+      }
+
+      .social-media-links {
+        width: 100%;
+        height: 118px;
+        margin: 0px;
+        padding: 0px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /*border: 1px solid blue;*/
+        background: #ffffff;
+        border: 1px solid #d3d3fa;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="email-container">
+      <div class="main-content">
+        <div
+          style="
+            height: 340px;
+            padding: 40px 30px 45px 30px;
+            margin: 0px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+          "
+        >
+          <img
+            src="assets/cd_logo.svg"
+            alt="CD logo"
+            style="width: 358px; height: 60px"
+          />
+          <div class="scan-overview">
+            <p class="your-scan">Your Scan Was Completed!</p>
+            <p class="last-scan">
+              During the last scan, we found a total of <span
+                style="
+                  color: #07af7e;
+                  font-family: Sans-Serif;
+                  font-weight: 600;
+                  font-size: 22px;
+                  line-height: 26.4px;
+                "
+                >6 vulnerabilities</span
+              >
+              for the application clouddefenseai.com/helm
+            </p>
+          </div>
+        </div>
+        <div class="application-info">
+          <p class="application-bar">APPLICATION</p>
+          <div class="info">
+            <div class="appplication-about">
+              <div class="name">
+                <p
+                  style="
+                    width: 300px;
+                    display: flex;
+                    justify-content: space-between;
+                  "
+                >
+                  <span
+                    style="
+                      opacity: 70%;
+                      font-family: Sans-Serif;
+                      font-weight: 400;
+                      font-size: 22px;
+                      line-height: 26.4px;
+                      color: #1e1e1e;
+                    "
+                    >Name</span
+                  >
+                  <span>:</span>
+                </p>
+                <a
+                  href=""
+                  style="
+                    margin-left: 50px;
+                    font-family: Sans-Serif;
+                    font-weight: 600;
+                    font-size: 22px;
+                    line-height: 26.4px;
+                    color: #07af7e;
+                  "
+                  ;
+                  text-decoration:
+                  underline;
+                  >clouddefenseai.com/helm</a
+                >
+              </div>
+              <div class="branch">
+                <p
+                  style="
+                    width: 300px;
+                    display: flex;
+                    justify-content: space-between;
+                  "
+                >
+                  <span
+                    style="
+                      opacity: 70%;
+                      font-family: Sans-Serif;
+                      font-weight: 400;
+                      font-size: 22px;
+                      line-height: 26.4px;
+                      color: #1e1e1e;
+                    "
+                    >Branch</span
+                  >
+                  <span>:</span>
+                </p>
+                <p
+                  style="
+                    margin-left: 50px;
+                    font-family: Sans-Serif;
+                    font-weight: 600;
+                    font-size: 22px;
+                    line-height: 26.4px;
+                    color: #1e1e1e;
+                  "
+                >
+                  Main
+                </p>
+              </div>
+              <div class="status">
+                <p
+                  style="
+                    width: 300px;
+                    display: flex;
+                    justify-content: space-between;
+                  "
+                >
+                  <span
+                    style="
+                      opacity: 70%;
+                      font-family: Sans-Serif;
+                      font-weight: 400;
+                      font-size: 22px;
+                      line-height: 26.4px;
+                      color: #1e1e1e;
+                    "
+                    >Status</span
+                  >
+                  <span>:</span>
+                </p>
+                <p
+                  style="
+                    margin-left: 50px;
+                    font-family: Sans-Serif;
+                    font-weight: 600;
+                    font-size: 22px;
+                    line-height: 26.4px;
+                    color: #1e1e1e;
+                  "
+                >
+                  Completed
+                </p>
+              </div>
+              <div class="failed-build-policies">
+                <p
+                  style="
+                    width: 300px;
+                    display: flex;
+                    justify-content: space-between;
+                  "
+                >
+                  <span
+                    style="
+                      opacity: 70%;
+                      font-family: Sans-Serif;
+                      font-weight: 400;
+                      font-size: 22px;
+                      line-height: 26.4px;
+                      color: #1e1e1e;
+                    "
+                    >Failed Build Policy</span
+                  >
+                  <span>:</span>
+                </p>
+                <p
+                  style="
+                    margin-left: 50px;
+                    font-family: Sans-Serif;
+                    font-weight: 600;
+                    font-size: 22px;
+                    line-height: 26.4px;
+                    color: #1e1e1e;
+                  "
+                >
+                  None
+                </p>
+              </div>
+            </div>
+            <div class="findings">
+              <div class="criticial vuln" style="background: #bc362414">
+                <div class="finding-data">
+                  <p
+                    style="
+                      margin: 0px;
+                      padding: 0px;
+                      width: 100%;
+                      height: 26px;
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                      opacity: 70%;
+                      font-size: 22px;
+                      line-height: 25px;
+                      font-weight: 700;
+                      font-family: Sans-Serif;
+                      color: #1e1e1e;
+                    "
+                  >
+                    0
+                  </p>
+                  <p
+                    style="
+                      margin: 0px;
+                      padding: 0px;
+                      width: 100%;
+                      height: 23px;
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                      font-size: 19px;
+                      line-height: 22.8px;
+                      font-weight: 700;
+                      font-family: Sans-Serif;
+                      color: #bc3624;
+                    "
+                  >
+                    CRITICAL
+                  </p>
+                </div>
+              </div>
+              <div class="hard vuln" style="background: #ea4f5514">
+                <div class="finding-data">
+                  <p
+                    style="
+                      margin: 0px;
+                      padding: 0px;
+                      width: 100%;
+                      height: 26px;
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                      opacity: 70%;
+                      font-size: 22px;
+                      line-height: 25px;
+                      font-weight: 700;
+                      font-family: Sans-Serif;
+                      color: #1e1e1e;
+                    "
+                  >
+                    6
+                  </p>
+                  <p
+                    style="
+                      margin: 0px;
+                      padding: 0px;
+                      width: 100%;
+                      height: 23px;
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                      font-size: 19px;
+                      line-height: 22.8px;
+                      font-weight: 700;
+                      font-family: Sans-Serif;
+                      color: #ea4f55;
+                    "
+                  >
+                    HIGH
+                  </p>
+                </div>
+              </div>
+              <div class="medium vuln" style="background: #f2972c14">
+                <div class="finding-data">
+                  <p
+                    style="
+                      margin: 0px;
+                      padding: 0px;
+                      width: 100%;
+                      height: 26px;
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                      opacity: 70%;
+                      font-size: 22px;
+                      line-height: 25px;
+                      font-weight: 700;
+                      font-family: Sans-Serif;
+                      color: #1e1e1e;
+                    "
+                  >
+                    0
+                  </p>
+                  <p
+                    style="
+                      margin: 0px;
+                      padding: 0px;
+                      width: 100%;
+                      height: 23px;
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                      font-size: 19px;
+                      line-height: 22.8px;
+                      font-weight: 700;
+                      font-family: Sans-Serif;
+                      color: #f2972c;
+                    "
+                  >
+                    MEDIUM
+                  </p>
+                </div>
+              </div>
+              <div class="low vuln" style="background: #fdc50014">
+                <div class="finding-data">
+                  <p
+                    style="
+                      margin: 0px;
+                      padding: 0px;
+                      width: 100%;
+                      height: 26px;
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                      opacity: 70%;
+                      font-size: 22px;
+                      line-height: 25px;
+                      font-weight: 700;
+                      font-family: Sans-Serif;
+                      color: #1e1e1e;
+                    "
+                  >
+                    0
+                  </p>
+                  <p
+                    style="
+                      margin: 0px;
+                      padding: 0px;
+                      width: 100%;
+                      height: 23px;
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                      font-size: 19px;
+                      line-height: 22.8px;
+                      font-weight: 700;
+                      font-family: Sans-Serif;
+                      color: #fdc500;
+                    "
+                  >
+                    LOW
+                  </p>
+                </div>
+              </div>
+              <div class="exploit vuln" style="background: #1e1e1e1a">
+                <div class="finding-data">
+                  <p
+                    style="
+                      margin: 0px;
+                      padding: 0px;
+                      width: 100%;
+                      height: 26px;
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                      opacity: 70%;
+                      font-size: 22px;
+                      line-height: 25px;
+                      font-weight: 700;
+                      font-family: Sans-Serif;
+                      color: #1e1e1e;
+                    "
+                  >
+                    0
+                  </p>
+                  <p
+                    style="
+                      margin: 0px;
+                      padding: 0px;
+                      width: 100%;
+                      height: 23px;
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                      font-size: 19px;
+                      line-height: 22.8px;
+                      font-weight: 700;
+                      font-family: Sans-Serif;
+                      color: #1e1e1e;
+                    "
+                  >
+                    EXPLOIT
+                  </p>
+                </div>
+              </div>
+            </div>
+            <button class="view-all-scan">VIEW ALL SCAN</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class="support">
+          <p
+            style="
+              padding: 0px;
+              margin: 0px;
+              height: 28px;
+              font-family: Sans-Serif;
+              font-weight: 400;
+              font-size: 23px;
+              line-height: 27.6px;
+              color: #1e1e1e;
+            "
+          >
+            Need Help?
+          </p>
+          <p
+            style="
+              padding: 0px;
+              margin: 0px;
+              height: 28px;
+              font-family: Sans-Serif;
+              font-weight: 400;
+              font-size: 23px;
+              line-height: 27.6px;
+              color: #1e1e1e;
+            "
+          >
+            Please reach out to us at&nbsp;
+            <a
+              href="https://support.clouddefense.ai/support/home"
+              style="
+                font-family: Sans-Serif;
+                font-weight: 600;
+                font-size: 23px;
+                line-height: 27.6px;
+                color: #07af7e;
+              "
+              >support@clouddefenseai.com</a
+            >
+          </p>
+        </div>
+        <div class="social-media-links">
+          <div
+            style="
+              width: 1100px;
+              height: 34px;
+              margin: 0px;
+              padding: 0px 0px 0px 30px;
+              display: flex;
+              align-items: center;
+              column-gap: 20px;
+            "
+          >
+            <p
+              style="
+                padding: 0px;
+                margin: 0px;
+                height: 28px;
+                font-family: Sans-Serif;
+                font-weight: 400;
+                font-size: 23px;
+                line-height: 27.6px;
+                color: #1e1e1e;
+              "
+            >
+              Follow us on social :
+            </p>
+            <div
+              style="
+                height: 34px;
+                margin: 0px;
+                padding: 0px;
+                display: flex;
+                align-items: center;
+                column-gap: 10px;
+              "
+            >
+              <a
+                href="https://x.com/CloudDefenseAI"
+                style="height: 34px; width: 34px"
+              >
+                <img src="assets/x.svg" alt="X" />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/clouddefense"
+                style="height: 34px; width: 34px"
+              >
+                <img src="assets/linkedin.svg" alt="in" />
+              </a>
+              <a
+                href="https://www.instagram.com/clouddefense.ai/"
+                style="height: 34px; width: 34px"
+              >
+                <img src="assets/insta.svg" alt="insta" />
+              </a>
+              <a
+                href="https://www.facebook.com/clouddefense"
+                style="height: 34px; width: 34px"
+              >
+                <img src="assets/facebook.svg" alt="f" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
