@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+
     <style>
       .email-container {
         width: 100%;
@@ -31,7 +31,12 @@
         flex-direction: column;
         margin: 0px;
         padding: 0px;
-        position: relative; 
+        position: relative;
+      }
+
+      .cd-logo {
+        width: 358px;
+        height: 57px;
       }
 
       .scan-overview {
@@ -130,7 +135,7 @@
         padding: 0px 15px 0px 0px;
         column-gap: 15px;
         row-gap: 15px;
-        flex-wrap: wrap ;
+        flex-wrap: wrap;
       }
 
       .vuln {
@@ -181,8 +186,9 @@
         text-align: center;
       }
 
-      :hover .view-all-scan {
+      .view-all-scan:hover {
         cursor: pointer;
+        opacity: 85%;
       }
 
       .footer {
@@ -209,9 +215,20 @@
         display: flex;
         flex-direction: column;
         /* justify-content: space-between; */
-        row-gap: 20px ;
-        align-items: flex-start ;
+        row-gap: 20px;
+        align-items: flex-start;
         /* border: 1px solid blue; */
+      }
+
+      .support p {
+        padding: 0px;
+        margin: 0px;
+        min-height: 28px;
+        font-family: sans-serif;
+        font-weight: 400;
+        font-size: 23px;
+        line-height: 27.6px;
+        color: #1e1e1e;
       }
 
       .social-media-links {
@@ -299,22 +316,81 @@
         font-family: sans-serif;
         color: #1e1e1e;
       }
+
+      @media (max-width: 500px) {
+        .cd-logo {
+          width: 290px;
+          height: auto;
+        }
+
+        .your-scan {
+          font-size: 28px;
+          min-height: 40px;
+          line-height: 39px;
+        }
+
+        .application-table th {
+          width: 220px;
+          font-size: 22px;
+          line-height: 26.4px;
+        }
+
+        .application-table td {
+          padding: 0px 0px 0px 30px;
+          font-size: 22px;
+          line-height: 26.4px;
+        }
+
+        .vuln {
+          min-width: 110px;
+          min-height: 75px;
+        }
+
+        .finding-data {
+          max-width: 75px;
+          min-height: 45px;
+        }
+
+        .view-all-scan {
+          max-width: 176px;
+          min-height: 60px;
+          padding: 0px;
+
+          font-size: 18px;
+          font-weight: 600;
+          line-height: 22.4px;
+          text-align: center;
+        }
+
+        .support p {
+          min-height: 20px;
+          font-size: 18px;
+          line-height: 20px;
+        }
+
+        .social-media-links p {
+          font-size: 22px !important;
+          line-height: 24.6px !important;
+        }
+      }
     </style>
   </head>
 
   <body>
     <div class="email-container">
-      <div style="
-      max-width: 90%;
-      /* min-height: 1000px; */
-      opacity: 0px;
+      <div
+        style="
+          max-width: 90%;
+          /* min-height: 1000px; */
+          opacity: 0px;
 
-      display: flex;
-      flex-direction: column;
-      row-gap: 30px ;
-      margin: 0px 0px 0px 0px;
-      padding: 0px;
-       ">
+          display: flex;
+          flex-direction: column;
+          row-gap: 30px;
+          margin: 0px 0px 0px 0px;
+          padding: 0px;
+        "
+      >
         <div class="main-content">
           <div
             style="
@@ -329,12 +405,10 @@
           >
             <!-- cd logo -->
             <svg
-              width="358"
-              height="57"
+              class="cd-logo"
               viewBox="0 0 358 57"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              style="width: 358px; height: 60px"
             >
               <path
                 d="M53.9324 56.9996C58.5138 57.0158 62.9966 55.584 66.8133 52.8854C70.6299 50.1869 73.6088 46.343 75.3725 41.8405C77.1363 37.338 77.6057 32.3794 76.7212 27.5927C75.8368 22.8059 73.6383 18.4063 70.4042 14.9509C67.1701 11.4955 63.0457 9.13984 58.5535 8.18211C54.0613 7.22438 49.4032 7.7077 45.1691 9.57087C40.935 11.434 37.3153 14.5932 34.7685 18.6484C32.2216 22.7036 30.862 27.4724 30.862 32.351C30.8539 38.8767 33.2794 45.1388 37.6055 49.7608C41.9316 54.3829 47.8042 56.9866 53.9324 56.9996Z"
@@ -430,14 +504,17 @@
           <div class="application-info">
             <p class="application-bar">APPLICATION</p>
             <div class="info">
-              <div style="width: 90%; 
-              padding: 0px 15px 10px 0px; 
-              margin: 0px; 
-              overflow-x: auto;
-              scrollbar-color: #07af7e #07af7e;
-              scrollbar-width: thin;
-              scroll-behavior: smooth;
-              ">
+              <div
+                style="
+                  width: 90%;
+                  padding: 0px 15px 5px 0px;
+                  margin: 0px;
+                  overflow-x: auto;
+                  scrollbar-color: #07af7e #07af7e;
+                  scrollbar-width: thin;
+                  scroll-behavior: smooth;
+                "
+              >
                 <table class="application-table">
                   <tr>
                     <th>
@@ -447,7 +524,7 @@
                     <td>
                       <a
                         href="https://clouddefenseai.com/helm"
-                        style="color: #07af7e;"
+                        style="color: #07af7e"
                       >
                         clouddefenseai.com/helm
                       </a>
@@ -513,40 +590,16 @@
           </div>
         </div>
         <div class="support">
-          <p
-            style="
-              padding: 0px;
-              margin: 0px;
-              min-height: 28px;
-              font-family: sans-serif;
-              font-weight: 400;
-              font-size: 23px;
-              line-height: 27.6px;
-              color: #1e1e1e;
-            "
-          >
-            Need Help?
-          </p>
-          <p
-            style="
-              padding: 0px;
-              margin: 0px;
-              min-height: 28px;
-              font-family: sans-serif;
-              font-weight: 400;
-              font-size: 23px;
-              line-height: 27.6px;
-              color: #1e1e1e;
-            "
-          >
+          <p>Need Help?</p>
+          <p>
             Please reach out to us at&nbsp;
             <a
               href="https://support.clouddefense.ai/support/home"
               style="
-                font-family: sans-serif;
+                /* font-family: sans-serif; */
                 font-weight: 600;
-                font-size: 23px;
-                line-height: 27.6px;
+                /* font-size: 23px;
+                line-height: 27.6px; */
                 color: #07af7e;
               "
               >support@clouddefenseai.com</a
@@ -572,7 +625,7 @@
               style="
                 padding: 0px;
                 margin: 0px;
-                height: 28px;
+                min-height: 28px;
                 font-family: sans-serif;
                 font-weight: 400;
                 font-size: 23px;
@@ -584,12 +637,14 @@
             </p>
             <div
               style="
-                height: 34px;
+                min-height: 34px;
                 margin: 0px;
-                padding: 0px;
+                padding: 0px 15px 0px 0px;
                 display: flex;
                 align-items: center;
-                column-gap: 10px;
+                gap: 10px;
+                /* column-gap: 10px; */
+                flex-wrap: wrap;
               "
             >
               <a
